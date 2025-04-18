@@ -1,0 +1,31 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20" Background="{DynamicResource PrimaryBackground}" Height="200" Width="300">
+            <!-- Add Controls for Previewer Here -->
+            <StackPanel Spacing="10">
+                <ListBox>
+                    <ListBoxItem>test</ListBoxItem>
+                    <ListBoxItem>test</ListBoxItem>
+                    <ListBoxItem>test</ListBoxItem>
+                </ListBox>
+            </StackPanel>
+            
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+    
+    <Style Selector="ListBox">
+        <Setter Property="Background" Value="{DynamicResource PrimaryBackgroundGradient}"></Setter>
+        <Setter Property="BorderBrush" Value="{DynamicResource DefaultGradient}"></Setter>
+        <Setter Property="BorderThickness" Value="{DynamicResource PrimaryBorderThickness}"></Setter>
+        <Setter Property="CornerRadius" Value="3"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter>
+    </Style>
+    
+    <Style Selector="ListBox:pointerover">
+        <Setter Property="BorderBrush" Value="{DynamicResource HoverGradient}"></Setter>
+    </Style>
+    
+</Styles>

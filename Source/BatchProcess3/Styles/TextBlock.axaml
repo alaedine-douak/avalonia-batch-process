@@ -1,0 +1,27 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20" Background="{DynamicResource PrimaryBackground}">
+            <!-- Add Controls for Previewer Here -->
+            <StackPanel Spacing="10">
+                <TextBlock>Some text</TextBlock>
+                <TextBlock Classes="sub1">Sub 1 text block</TextBlock>
+            </StackPanel>
+            
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+    <Style Selector="TextBlock">
+        <!-- <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter> -->
+    </Style>
+    
+    <Style Selector="TextBlock.sub1">
+        <Setter Property="FontSize" Value="13"></Setter>
+        <Setter Property="FontWeight" Value="Bold"></Setter>
+        <Setter Property="Padding" Value="0"></Setter>
+        <Setter Property="Margin" Value="0 -5 0 0"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource AlertGradient}"></Setter>
+    </Style>
+    
+</Styles>

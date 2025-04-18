@@ -1,0 +1,38 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20" Background="{DynamicResource PrimaryBackground}" Height="200" Width="300">
+            <!-- Add Controls for Previewer Here -->
+            <StackPanel Spacing="10">
+                <TextBox>Some text box</TextBox>
+                <TextBox PasswordChar="*">Some text box</TextBox>
+            </StackPanel>
+            
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+    <Style Selector="TextBox">
+        <Setter Property="BorderBrush" Value="{DynamicResource DefaultGradient}"></Setter>
+        <Setter Property="BorderThickness" Value="{DynamicResource PrimaryBorderThickness}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource PrimaryBackground}"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter>
+    </Style>
+        
+    <Style Selector="TextBox:pointerover /template/ Border#PART_BorderElement">
+        <Setter Property="BorderBrush" Value="{DynamicResource HoverGradient}"></Setter>
+        <Setter Property="BorderThickness" Value="{DynamicResource PrimaryBorderThickness}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource PrimaryHoverBackground}"></Setter>
+    </Style>
+        
+    <Style Selector="TextBox:pointerover, TextBox:focus">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter>
+    </Style>
+        
+    <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+        <Setter Property="BorderBrush" Value="{DynamicResource HoverGradient}"></Setter>
+        <Setter Property="BorderThickness" Value="{DynamicResource PrimaryBorderThickness}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource PrimaryHoverBackground}"></Setter>
+    </Style>
+
+</Styles>

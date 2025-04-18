@@ -1,0 +1,119 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BatchProcess3.App"
+             xmlns:local="clr-namespace:BatchProcess3"
+             xmlns:vc="clr-namespace:BatchProcess3.ValueConverters"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator></local:ViewLocator>
+    </Application.DataTemplates>
+             
+    <Application.Styles>
+        <FluentTheme />
+        <StyleInclude Source="Styles/Buttons.axaml"></StyleInclude>
+        <StyleInclude Source="Styles/General.axaml"></StyleInclude>
+        <StyleInclude Source="Styles/Labels.axaml"></StyleInclude>
+        <StyleInclude Source="Styles/ListBox.axaml"></StyleInclude>
+        <StyleInclude Source="Styles/TextBlock.axaml"></StyleInclude>
+        <StyleInclude Source="Styles/TextBox.axaml"></StyleInclude>
+    </Application.Styles>
+             
+     <Application.Resources>
+         
+         <ResourceDictionary>
+             <ResourceDictionary.MergedDictionaries>
+                 <MergeResourceInclude Source="/Controls/IconButton.axaml"></MergeResourceInclude>
+                 <MergeResourceInclude Source="/Controls/CheckBox.axaml"></MergeResourceInclude>
+                 <MergeResourceInclude Source="/Controls/ToggleButton.axaml"></MergeResourceInclude>
+                 <MergeResourceInclude Source="/Controls/ComboBox.axaml"></MergeResourceInclude>
+                 <MergeResourceInclude Source="/Controls/ComboBoxItem.axaml"></MergeResourceInclude>
+                 <MergeResourceInclude Source="/Controls/ListBoxItem.axaml"></MergeResourceInclude>
+                 <MergeResourceInclude Source="/Controls/TabControl.axaml"></MergeResourceInclude>
+                 <MergeResourceInclude Source="/Controls/TabItem.axaml"></MergeResourceInclude>
+             </ResourceDictionary.MergedDictionaries>
+         </ResourceDictionary>
+
+         <vc:BooleanToBoldFontConverter x:Key="BooleanToBoldFontConverter" />
+         
+         <Thickness x:Key="PrimaryBorderThickness">2</Thickness>
+         
+         <SolidColorBrush x:Key="PrimaryForeground">#CFCFCF</SolidColorBrush>     
+         <SolidColorBrush x:Key="PrimaryForegroundSubtle">#aaa</SolidColorBrush>     
+         <SolidColorBrush x:Key="PrimaryBackground">#14172D</SolidColorBrush>     
+         
+         <Color x:Key="PrimaryBackgroundColor1">#111214</Color>
+         <Color x:Key="PrimaryBackgroundColor2">#151E3E</Color>
+         
+         <LinearGradientBrush x:Key="PrimaryBackgroundGradient" StartPoint="0%, 0%" EndPoint="100%, 0%">
+             <GradientStop Offset="0" Color="{DynamicResource PrimaryBackgroundColor1}"></GradientStop>
+             <GradientStop Offset="1" Color="{DynamicResource PrimaryBackgroundColor2}"></GradientStop>
+         </LinearGradientBrush>
+         
+         <SolidColorBrush x:Key="PrimaryHoverBackground">#333B5A</SolidColorBrush>     
+         <SolidColorBrush x:Key="PrimaryHoverForeground">White</SolidColorBrush>
+         
+         <LinearGradientBrush x:Key="DefaultGradient" StartPoint="0%, 0%" EndPoint="100%, 0%">
+             <GradientStop Offset="0" Color="#333B5A"></GradientStop>
+             <GradientStop Offset="1" Color="#333B5A"></GradientStop>
+         </LinearGradientBrush>
+         
+         <LinearGradientBrush x:Key="ActiveGradientText" StartPoint="0%, 0%" EndPoint="100%, 0%">
+             <GradientStop Offset="0" Color="#7C59CD"></GradientStop>
+             <GradientStop Offset="1" Color="#7C59CD"></GradientStop>
+         </LinearGradientBrush>
+         
+         <LinearGradientBrush x:Key="ActiveGradient" StartPoint="0%, 0%" EndPoint="100%, 0%">
+             <GradientStop Offset="0" Color="#6633DD"></GradientStop>
+             <GradientStop Offset="1" Color="#431B9F"></GradientStop>
+         </LinearGradientBrush>
+         
+         <LinearGradientBrush x:Key="ActiveHoverGradient" StartPoint="0%, 0%" EndPoint="100%, 0%">
+             <GradientStop Offset="0" Color="#6633DD"></GradientStop>
+             <GradientStop Offset="1" Color="#6633DD"></GradientStop>
+         </LinearGradientBrush>
+         
+         <LinearGradientBrush x:Key="HoverGradient" StartPoint="0%, 0%" EndPoint="100%, 0%">
+             <GradientStop Offset="0" Color="#00ffff"></GradientStop>
+             <GradientStop Offset="1" Color="#ff00ff"></GradientStop>
+         </LinearGradientBrush>
+         
+         <LinearGradientBrush x:Key="SuccessGradient" StartPoint="0%, 0%" EndPoint="100%, 0%">
+             <GradientStop Offset="0" Color="#00ff00"></GradientStop>
+             <GradientStop Offset="1" Color="#009900"></GradientStop>
+         </LinearGradientBrush>
+         
+         <LinearGradientBrush x:Key="SuccessHoverGradient" StartPoint="0%, 0%" EndPoint="100%, 0%">
+             <GradientStop Offset="0" Color="#44ff44"></GradientStop>
+             <GradientStop Offset="1" Color="#55cc55"></GradientStop>
+         </LinearGradientBrush>
+         
+         <LinearGradientBrush x:Key="AlertGradient" StartPoint="0%, 0%" EndPoint="100%, 0%">
+             <GradientStop Offset="0" Color="#ffff00"></GradientStop>
+             <GradientStop Offset="1" Color="#ff8800"></GradientStop>
+         </LinearGradientBrush>
+         
+         <LinearGradientBrush x:Key="AlertHoverGradient" StartPoint="0%, 0%" EndPoint="100%, 0%">
+             <GradientStop Offset="0" Color="#ffff00"></GradientStop>
+             <GradientStop Offset="1" Color="#ffff00"></GradientStop>
+         </LinearGradientBrush>
+         
+         <LinearGradientBrush x:Key="DangerGradient" StartPoint="0%, 0%" EndPoint="100%, 0%">
+             <GradientStop Offset="0" Color="#ff0000"></GradientStop>
+             <GradientStop Offset="1" Color="#aa0000"></GradientStop>
+         </LinearGradientBrush>
+         
+         <LinearGradientBrush x:Key="DangerHoverGradient" StartPoint="0%, 0%" EndPoint="100%, 0%">
+             <GradientStop Offset="0" Color="#ff4444"></GradientStop>
+             <GradientStop Offset="1" Color="#bb1111"></GradientStop>
+         </LinearGradientBrush>
+
+
+         <FontFamily x:Key="Phosphor">/Assets/Fonts/Phosphor.ttf#Phosphor</FontFamily>
+         <FontFamily x:Key="PhosphorFill">/Assets/Fonts/Phosphor-Fill.ttf#Phosphor-Fill</FontFamily>
+
+         <FontFamily x:Key="DefaultFontFamily">/Assets/Fonts/NotoSansJP.ttf</FontFamily>
+
+     </Application.Resources>
+</Application>

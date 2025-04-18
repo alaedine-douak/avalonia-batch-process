@@ -1,0 +1,67 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    x:ClassModifier="internal">
+  <Design.PreviewWith>
+    <Border Padding="0" Width="300" Height="300">
+      <ListBox>
+        <ListBoxItem>Item 1</ListBoxItem>
+        <ListBoxItem>Item 2 long</ListBoxItem>
+        <ListBoxItem IsSelected="True">Item 3</ListBoxItem>
+        <ListBoxItem IsEnabled="False">Item 4</ListBoxItem>
+        <ListBoxItem IsSelected="True" IsEnabled="False">Item 5</ListBoxItem>
+      </ListBox>
+    </Border>
+  </Design.PreviewWith>
+  <Thickness x:Key="ListBoxItemPadding">12,9,12,12</Thickness>
+  <ControlTheme x:Key="{x:Type ListBoxItem}" TargetType="ListBoxItem">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Padding" Value="{DynamicResource ListBoxItemPadding}" />
+    <Setter Property="Template">
+      <ControlTemplate>
+        <ContentPresenter Name="PART_ContentPresenter"
+                          Background="{Binding $parent[ListBoxItem].Background}"
+                          BorderBrush="{TemplateBinding BorderBrush}"
+                          BorderThickness="{TemplateBinding BorderThickness}"
+                          CornerRadius="{TemplateBinding CornerRadius}"
+                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                          Content="{TemplateBinding Content}"
+                          Padding="{TemplateBinding Padding}"
+                          VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" />
+      </ControlTemplate>
+    </Setter>
+
+    <Style Selector="^">
+      <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter>
+    </Style>
+
+    <!--  PointerOver state  -->
+    <Style Selector="^:pointerover">
+      <Setter Property="Background" Value="{DynamicResource PrimaryHoverBackground}" />
+    </Style>
+
+    <!--  Pressed state  -->
+    <Style Selector="^:pressed">
+      <Setter Property="Background" Value="{DynamicResource HoverGradient}" />
+    </Style>
+
+    <!--  Disabled state  -->
+    <Style Selector="^:disabled">
+      <Setter Property="BorderBrush" Value="{DynamicResource PrimaryHoverBackground}" />
+      <Setter Property="Foreground" Value="{DynamicResource PrimaryHoverBackground}" />
+      <Setter Property="FontWeight" Value="Bold"></Setter>
+    </Style>
+    
+    <!--  Selected state  -->
+    <Style Selector="^:selected">
+      <Setter Property="Background" Value="{DynamicResource ActiveHoverGradient}" />
+      <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}" />
+      
+      <!--  Selected Disabled state  -->
+      <Style Selector="^:disabled">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryBackground}" />
+        <Setter Property="Background" Value="{DynamicResource PrimaryHoverBackground}" />
+      </Style>
+    </Style>
+  </ControlTheme>
+</ResourceDictionary>
