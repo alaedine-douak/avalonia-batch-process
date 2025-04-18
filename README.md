@@ -1,6 +1,9 @@
 # Avalonia BatchProcess
 Avalonia BatchProcess is a .NET application built using the Avalonia UI framework. It is designed to provide a modern and responsive user interface for batch processing tasks. The project leverages Avalonia's cross-platform capabilities to ensure compatibility across different operating systems.
 
+![Screenshot](https://github.com/alaedine-douak/avalonia-batch-process/blob/main/screenshots/action.png)
+
+
 ## Features
 - Utilizes Avalonia for a modern UI experience.
 - Includes Fluent themes and custom fonts for enhanced visuals.
